@@ -1,0 +1,50 @@
+<div class="row">
+  <form class="col s12" #frm="ngForm" (ngSubmit)="addProduct(frm)">
+    <h4 class="center">Fill Product Details</h4>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">label</i>
+        <input
+          id="icon_prefix"
+          type="text"
+          class="validate"
+          name="productName"
+          required
+          ngModel
+        />
+        <label for="icon_prefix">Product Name</label>
+      </div>
+      <div class="input-field col s12">
+        <i class="material-icons prefix">call_to_action</i>
+        <input
+          id="icon_telephone"
+          type="tel"
+          class="validate"
+          name="productPrice"
+          required
+          ngModel
+        />
+        <label for="icon_telephone">Price</label>
+      </div>
+      <div class="input-field col s12">
+        <i class="material-icons prefix">mode_edit</i>
+        <textarea
+          id="icon_prefix2"
+          class="materialize-textarea"
+          name="productDescription"
+          ngModel
+          required
+        ></textarea>
+        <label for="icon_prefix2">Description</label>
+      </div>
+    </div>
+    <button
+      type="submit"
+      name="button"
+      class="btn indigo"
+      [disabled]="frm.invalid"
+    >
+      ADD Product
+    </button>
+  </form>
+</div>
